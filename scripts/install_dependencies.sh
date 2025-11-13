@@ -40,10 +40,27 @@ apk add --no-cache \
     php-xml \
     php-json \
     php-curl \
+    php-dom \
     php-zip \
     php-intl \
     php-pdo_mysql \
     php-mysqli \
+    php-tokenizer \
+    php-session \
+    php-xmlwriter \
+    php-fileinfo \
+    php-calendar \
+    php-bcmath \
+    php-exif \
+    php-gd \
+    php-gettext \
+    php-iconv \
+    php-openssl \
+    php-posix \
+    php-simplexml \
+    php-sockets \
+    php-sodium \
+    php-xmlreader \
     mariadb-client \
     gnupg \
     binutils
