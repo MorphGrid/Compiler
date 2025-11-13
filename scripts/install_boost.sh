@@ -23,7 +23,7 @@ tar -xf boost_$BOOST_VERSION_DASH.tar.gz
 cd boost_$BOOST_VERSION_DASH
 sh bootstrap.sh --with-libraries=all
 
-./b2 install $TYPE $BOOST_VARIANT variant=$BOOST_VARIANT debug-symbols=$DEBUG --without-python -j 4
+./b2 install $TYPE $BOOST_VARIANT variant=$BOOST_VARIANT debug-symbols=$DEBUG -j 4
 
 cd ..
 rm boost_$BOOST_VERSION_DASH -rf
