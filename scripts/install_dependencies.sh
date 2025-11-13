@@ -32,6 +32,19 @@ apk add --no-cache \
     lcov \
     autoconf \
     clang-extra-tools \
+    php \
+    php-cli \
+    php-phar \
+    php-opcache \
+    php-mbstring \
+    php-xml \
+    php-json \
+    php-curl \
+    php-zip \
+    php-intl \
+    php-pdo_mysql \
+    php-mysqli \
+    mariadb-client \
     gnupg \
     binutils
 
@@ -85,3 +98,9 @@ make -j4
 make install
 cd ../..
 rm bcrypt -Rf
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'c8b085408188070d5f52bcfe4ecfbee5f727afa458b2573b8eaaf77b3419b0bf2768dc67c86944da1544f06fa544fd47') { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer-setup.php'); exit(1); }"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+mv composer.phar /usr/local/bin/composer
