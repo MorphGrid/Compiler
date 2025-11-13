@@ -3,7 +3,7 @@ name: Continuous Integration
 on: [ push ]
 
 env:
-  REGISTRY_IMAGE: ghcr.io/MorphGrid/Compiler
+  REGISTRY_IMAGE: ghcr.io/morphgrid/compiler
 
 jobs:
   build:
